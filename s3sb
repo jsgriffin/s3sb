@@ -50,7 +50,7 @@ DIRNAME=$7
 
 TIMESTAMP=`date "+%Y%m%d.%H%M%S"`
 
-if [ $# -lt 7 ]
+if [ "$MODE" == "all" -a $# -lt 7 ] || [ "$MODE" == "files" -a $# -lt 7 ] || [ "$MODE" == "db" -a $# -lt 6 ]
 then
 	echo "s3sb version $VERSION by BigglesZX"
 	echo "http://github.com/BigglesZX/s3sb"
